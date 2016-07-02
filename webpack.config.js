@@ -1,3 +1,5 @@
+var path = require("path");
+
 module.exports = {
     entry: "./src/index.tsx",
     output: {
@@ -20,7 +22,8 @@ module.exports = {
 
         preLoaders: [
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { test: /\.js$/, loader: "source-map-loader" }
+            { test: /\.js$/, loader: "source-map-loader", include: [path.resolve(__dirname, "dist")] },
+            // { test: /\.js$/, loader: "source-map-loader", include: [path.resolve(__dirname, "dist")] },
         ]
     },
 
