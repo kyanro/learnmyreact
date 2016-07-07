@@ -1,6 +1,7 @@
 module.exports = {
     entry: {
-        sample: "./src/index.tsx"
+        sample: "./src/index.tsx",
+        "1": "./learnyoureact/1/index.tsx"
     },
     output: {
         filename: "./dist/[name]/bundle.js",
